@@ -204,46 +204,112 @@ footer .row{display:flex;gap:22px;justify-content:center;margin-bottom:12px;font
 /* floating button */
 .fab{position:fixed;right:18px;bottom:18px;z-index:60}
 
-/* ---- Noutbuk / planshet ---- */
+/* ---- Planshet ---- */
 @media (max-width:1024px){
   .hero{gap:32px}
-  .grid3{grid-template-columns:1fr 1fr}
-  .steps,.works{grid-template-columns:1fr 1fr}
+  .links{gap:18px}
 }
 @media (max-width:900px){
   .hero{grid-template-columns:1fr;padding:118px 0 60px}
-  .links{display:none}
-  .stats{grid-template-columns:1fr 1fr}
-  .stat:nth-child(3){border-left:0}
-  .stat:nth-child(n+3){border-top:1px solid var(--line)}
   .book{grid-template-columns:1fr;padding:34px 26px;gap:30px}
   section{padding-top:70px}
 }
-/* ---- Telefon ---- */
+
+/* ---- Telefon: noutbukdagi tartib saqlanadi, hammasi kichrayadi ---- */
 @media (max-width:600px){
-  .wrap{padding:0 16px}
-  .nav{top:10px;padding:0 10px}
-  .nav-in{padding:8px 8px 8px 16px}
+  .wrap{padding:0 14px}
+
+  /* tepa panel */
+  .nav{top:8px;padding:0 8px}
+  .nav-in{padding:6px 7px 6px 14px;gap:8px}
+  .logo{font-size:12px}
+  .links{gap:12px;font-size:11.5px}
+  .links a:nth-child(2){display:none}
   .nav-in .btn{display:none}
-  .hero{padding:96px 0 44px;gap:28px}
-  .lead{font-size:16px;margin:16px 0 24px}
-  .cta .btn{flex:1 1 100%}
-  .pill{font-size:12px;margin-bottom:18px}
-  .code pre{font-size:12.5px;padding:16px;min-height:240px}
-  .grid3,.steps,.works{grid-template-columns:1fr}
-  .card,.step{padding:22px}
-  .shot{height:140px}
-  .stat{padding:20px 10px}
-  section{padding-top:56px}
-  .sec-h{margin-bottom:26px}
-  .sec-h p{font-size:15px}
-  .book{padding:26px 18px;border-radius:20px}
-  .chip{padding:10px 14px}
-  .form input,.form textarea{font-size:16px} /* iPhone zoom bo'lmasligi uchun */
-  .fab{left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px))}
-  footer{margin-top:60px;padding-bottom:96px}
-  .orb.a{width:340px;height:340px}
-  .orb.b,.orb.c{width:260px;height:260px}
+  .theme{width:36px;height:36px}
+  .ring{width:25px;height:25px}
+  .core{width:13px;height:13px;border-width:2px}
+  .picker{padding:16px}
+
+  /* tugmalar */
+  .btn{font-size:13px;padding:11px 18px}
+  .btn.sm{padding:8px 14px;font-size:12px}
+
+  /* bosh qism */
+  .hero{padding:84px 0 34px;gap:20px}
+  .pill{font-size:11px;padding:6px 12px;margin-bottom:14px;gap:8px}
+  h1{font-size:27px}
+  .lead{font-size:13.5px;margin:12px 0 18px}
+  .cta{flex-wrap:nowrap;gap:8px}
+  .cta .btn{flex:1;padding:11px 8px;font-size:12.5px}
+  .code{border-radius:16px}
+  .code-bar{padding:10px 14px}
+  .code-bar i{width:9px;height:9px}
+  .code-bar span{font-size:11px}
+  .code pre{font-size:11px;line-height:1.65;padding:14px;min-height:0}
+  .caret{width:6px;height:12px}
+
+  /* raqamlar bir qatorda */
+  .glass{border-radius:16px}
+  .stats{padding:4px}
+  .stat{padding:14px 2px}
+  .stat b{font-size:15px}
+  .stat span{font-size:10px;display:block;line-height:1.3}
+
+  .marq{margin-top:30px}
+  .track{gap:8px}
+  .track span{padding:7px 14px;font-size:12px}
+
+  /* bo'limlar */
+  section{padding-top:44px}
+  .sec-h{margin-bottom:18px}
+  h2{font-size:21px}
+  .sec-h p{font-size:13px;margin-top:8px}
+
+  .grid3,.steps,.works{grid-template-columns:1fr 1fr;gap:10px}
+  .card{padding:14px}
+  .card h3{font-size:14px;margin:10px 0 4px}
+  .card p{font-size:12px;line-height:1.5}
+  .tag{font-size:10px;padding:3px 9px}
+
+  .step{padding:14px}
+  .step em{font-size:26px}
+  .step h3{font-size:14px;margin:6px 0 4px}
+  .step p{font-size:12px;line-height:1.5}
+
+  .shot{height:86px}
+  .shot::after{inset:14px 14px 0}
+  .work div.info{padding:10px 12px 14px}
+  .work h3{font-size:13px}
+  .work p{font-size:11px}
+
+  /* bron qilish */
+  .book{padding:20px 16px;gap:20px;border-radius:18px}
+  .book .txt p{font-size:13px}
+  .perks{gap:8px;margin-top:16px}
+  .perks li{font-size:12.5px;gap:10px}
+  .perks li::before{width:20px;height:20px;font-size:11px}
+  .form{gap:14px}
+  .form label{font-size:12.5px;margin-bottom:6px}
+  .form input,.form textarea{font-size:16px;padding:11px 13px;border-radius:12px} /* 16px: iPhone ekranni kattalashtirmasligi uchun */
+  .form textarea{min-height:76px}
+  .chips{gap:7px}
+  .chip{padding:7px 12px;font-size:12px}
+  .big{padding:13px 20px;font-size:15px}
+  .hint{font-size:11.5px}
+
+  /* pastdagi suzuvchi tugma: kichkina */
+  .fab{left:auto;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));padding:11px 18px;font-size:13px}
+
+  footer{margin-top:44px;padding:24px 16px 76px;font-size:12px}
+  footer .row{gap:18px;margin-bottom:8px}
+  .orb.a{width:300px;height:300px}
+  .orb.b,.orb.c{width:230px;height:230px}
+}
+/* juda kichik telefonlar */
+@media (max-width:360px){
+  h1{font-size:24px}
+  .links a:nth-child(3){display:none}
 }
 @media (min-width:1400px){
   .wrap,.nav-in{max-width:1240px}
